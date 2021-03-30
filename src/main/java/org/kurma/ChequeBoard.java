@@ -40,7 +40,7 @@ public class ChequeBoard {
         // stop the recursion and print path if the visited count equals to 10x10, means all tiles are covered
         if (visitedTileCount == size * size) {
             sb.deleteCharAt(sb.length() - 1);
-            System.out.println("One possible path to cover all tiles:\n" + sb.toString());
+            System.out.println("One of the possible paths to cover all tiles:\n" + sb.toString());
             return true;
         }
 
