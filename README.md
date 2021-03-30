@@ -13,7 +13,7 @@ following the above rules, starting from any tile.
 Recursive Depth-First traversal with a tweak is used to solve this problem. StringBuilder object maintains the current path across the recursive calls. In addition, count of visited tiles is maintained across the recursive calls, will stop the recursoin and print the path when all the tiles are visited (meaning, when the count of visited tiles becomes total grid size, in this case 10x10).
 
 ## Tweak
-The normal DFS ends up in endless number of iterations. The trick is to loop through the next tiles with short legal moves first. At each tile, we are going to sort the next moves in the order of further legal move count in ascending order to pick up the next tile.
+The normal DFS ends up in endless number of iterations. The trick is to loop through the next possible unvisited tiles with least number of next legal moves first. At each tile, we are going to sort the next possible moves in the order of next legal move count in ascending order to pick up the next tile.
 
 ## Algorithm
 1) Start traversing from (0,0) tile in cheque board.
