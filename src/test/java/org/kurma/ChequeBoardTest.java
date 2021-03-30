@@ -46,8 +46,8 @@ class ChequeBoardTest {
 
     @Test
     void testNextTilesSortingByNextMoveCount() {
-        List<Integer> actual = chequeBoard.nextMoves(0, 0).stream().map(ChequeBoardTest::pointToInteger).collect(Collectors.toList());
-        List<Integer> expected = Stream.of(new int[]{0, 3}, new int[]{2, 2}, new int[]{3, 0}).map(ChequeBoardTest::pointToInteger).collect(Collectors.toList());
+        List<Integer> actual = chequeBoard.nextMovesSortedByNextMoves(0, 0).stream().map(ChequeBoardTest::pointToInteger).collect(Collectors.toList());
+        List<Integer> expected = Stream.of(new int[]{0, 3}, new int[]{3, 0}, new int[]{2, 2}).map(ChequeBoardTest::pointToInteger).collect(Collectors.toList());
         assertEquals(expected, actual);
     }
 
